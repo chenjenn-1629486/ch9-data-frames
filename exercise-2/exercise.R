@@ -24,7 +24,7 @@ salaries$change <- salary_2018 - salary_2017
 
 # Create a column 'got_raise' that is TRUE if the person got a raise (their
 # salary went up)
-
+salaries$got_raise <- salaries$change > 0
 
 
 ### Retrieve values from your data frame to answer the following questions
@@ -32,10 +32,10 @@ salaries$change <- salary_2018 - salary_2017
 ### cell rather than the whole row!)
 
 # What was the 2018 salary of employee 57
-
+salary_57 <- salaries[salaries$employees == "Employee 57", "salary_2018"]
 
 # How many employees got a raise?
-
+nrow(salaries [salaries$got_raise == TRUE, ])
 
 # What was the dollar value of the highest raise?
 
