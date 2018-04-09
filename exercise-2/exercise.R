@@ -38,16 +38,16 @@ salary_57 <- salaries[salaries$employees == "Employee 57", "salary_2018"]
 nrow(salaries [salaries$got_raise == TRUE, ])
 
 # What was the dollar value of the highest raise?
-
+highest_raise <- max(salaries$change)
 
 # What was the "name" of the employee who received the highest raise?
-
+got_biggest_raise <- salaries[salaries$change == highest_raise, "employees"]
 
 # What was the largest decrease in salaries between the two years?
-
+biggest_paycut <- min(salaries$change)
 
 # What was the name of the employee who recieved largest decrease in salary?
-
+got_biggest_cut <- salaries[salaries$change == biggest_paycut, "employees"]
 
 # What was the average salary change?
 
