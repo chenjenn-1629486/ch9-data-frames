@@ -37,3 +37,4 @@ organization_smallest_grant <- organization[grants$total_amount == smallest_gran
 
 # How many grants were awarded in 2010?
 length(grants$group [grants$start_year == 2010])
+sum(grants$start_year == 2010)
